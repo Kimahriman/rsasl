@@ -63,7 +63,7 @@ impl Mechname {
         self.inner.as_bytes()
     }
 
-    pub(crate) const fn const_new(s: &[u8]) -> &Self {
+    pub const fn const_new(s: &[u8]) -> &Self {
         unsafe { core::mem::transmute(s) }
     }
 }
